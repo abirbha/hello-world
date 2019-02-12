@@ -6,11 +6,11 @@ import java.io.IOException;
 
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Test;
 
 import com.borland.silk.keyworddriven.annotations.Argument;
@@ -42,13 +42,13 @@ public class dataProcessing {
 
 		FileInputStream file = new FileInputStream(filePath);
 //        
-		Workbook workbook = new XSSFWorkbook(file);
+		Workbook workbook = new HSSFWorkbook(file);
 		int sheetNum = workbook.getSheetIndex(sheetName);
-		XSSFSheet sheet = (XSSFSheet) workbook.getSheetAt(sheetNum);
+		HSSFSheet sheet = (HSSFSheet) workbook.getSheetAt(sheetNum);
 		int lastRow = sheet.getLastRowNum();
 		System.out.println("ligne = " + lastRow);
 
-		XSSFRow row = (XSSFRow) sheet.getRow(ligne); // 1 : ligne 1
+		HSSFRow row = (HSSFRow) sheet.getRow(ligne); // 1 : ligne 1
 		Cell cellule = row.getCell(Cellule); // colonne 21
 
 		try {
@@ -87,13 +87,13 @@ public class dataProcessing {
 
 		FileInputStream file = new FileInputStream(filePath);
 //        
-		Workbook workbook = new XSSFWorkbook(file);
+		Workbook workbook = new HSSFWorkbook(file);
 		int sheetNum = workbook.getSheetIndex(sheetName);
-		XSSFSheet sheet = (XSSFSheet) workbook.getSheetAt(sheetNum);
+		HSSFSheet sheet = (HSSFSheet) workbook.getSheetAt(sheetNum);
 		int lastRow = sheet.getLastRowNum();
 		System.out.println("ligne = " + lastRow);
 
-		XSSFRow row = (XSSFRow) sheet.getRow(ligne); // 1 : ligne 1
+		HSSFRow row = (HSSFRow) sheet.getRow(ligne); // 1 : ligne 1
 		Cell cellule = row.getCell(Cellule); // colonne 21
 		try {
 			String num = cellule.getStringCellValue();
@@ -112,23 +112,21 @@ public class dataProcessing {
 			String status = "ko";
 			return status;
 		}
-		
+
 	}
 
 	public static void main(String[] args) throws IOException {
 		dataProcessing dataProcessing = new dataProcessing();
 		try {
-			dataProcessing.SaveData("157584889946",
-					"C:\\Users\\bha\\Desktop\\07122018pole-qualite-fonctionnel Compte rendu  de la rétrospective -sprint 9.xlsx",
-					"Feuil1", 1, 21);
-			String opereation = dataProcessing.ReadData(
-					"C:\\Users\\bha\\Desktop\\07122018pole-qualite-fonctionnel Compte rendu  de la rétrospective -sprint 9.xlsx",
-					"Feuil1", 1, 21);
+			dataProcessing.SaveData("157584889946", "C:\\Users\\bha\\Desktop\\Bib\\SAB_Datasource_v1.xls",
+					"DataKeywords", 1, 21);
+			String opereation = dataProcessing.ReadData("C:\\Users\\bha\\Desktop\\Bib\\SAB_Datasource_v1.xls",
+					"DataKeywords", 1, 21);
 			System.out.println(opereation);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			
+
 		}
 	}
 }
