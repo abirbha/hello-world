@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/bha/Desktop/KeywordsGlobaux/KeywordsGlobaux/buildlib/ecj-3.15.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bha/Desktop/KeywordsGlobaux/KeywordsGlobaux/buildlib/junit.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bha/Desktop/KeywordsGlobaux/KeywordsGlobaux/buildlib/org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bha/Desktop/KeywordsGlobaux/KeywordsGlobaux/buildlib/silktest-jtf-nodeps.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bha/Downloads/jar_files (3)/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bha/Downloads/jar_files (3)/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bha/Downloads/jar_files (3)/curvesapi-1.04.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bha/Downloads/jar_files (3)/poi-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bha/Downloads/jar_files (3)/poi-ooxml-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bha/Downloads/jar_files (3)/poi-ooxml-schemas-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bha/Downloads/jar_files (3)/stax-api-1.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bha/Downloads/jar_files (3)/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bha/Desktop/Bib-Log4j/For-Folder-Lib/apache-logging-log4j.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bha/Downloads/apache-log4j-2.11.1-bin/apache-log4j-2.11.1-bin/log4j-core-2.11.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
